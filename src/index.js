@@ -62,7 +62,14 @@ threeContacts.forEach((contact) =>{
   
   // ITERATION 2 - Delete Buttons
   
-  // Your code goes here ...
+  const deleteButtons = document.querySelectorAll(".btn-delete");
+  for (let i = 0; i < deleteButtons.length; i++){
+    const button = deleteButtons[i];
+    button.addEventListener("click", (e) => {
+      const row = e.target.closest("tr");
+      row.remove(button);
+    })
+  }
   
   
 
