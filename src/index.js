@@ -74,6 +74,7 @@ threeContacts.forEach((contact) =>{
 // Bonus: ITERATION 4 - Add Random Contacts
 
 buttonAddRandom.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * contacts.length);
   const random = contacts.splice(randomIndex, 1);
   const newRow = document.createElement("tr");
   console.log(random);
